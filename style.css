@@ -1,0 +1,57 @@
+.container {
+    width: 800px;
+    height: 600px;
+    border: 2px solid grey;
+    margin: 0 auto;
+}
+
+#div1{
+    width: 500px;
+    height: 500px;
+    border: 1px solid grey;
+    margin: 50px auto;
+    display: none;
+}
+#div2 {
+    width: 700px;
+    height: 500px;
+    border: 1px solid grey;
+    margin: 50px auto;
+    display: none;
+}
+#div3 {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    margin: 50px auto;
+    display: none;
+}
+#form {
+  max-width: 800px;
+    margin: 50px auto;
+    padding-left: 240px;
+}
+
+#select {
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: #f6f6f6;
+
+}
+
+#input {
+    width: 100px;
+    margin: 0 10px;
+}
+#input:before {
+    content: 'выберите цвет';
+    margin-top: 20px;
+}
+
+#btn {
+   padding: 5px 20px;
+    font-size: 20px;
+    border: 1px solid grey;
+}
+
