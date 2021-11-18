@@ -1,52 +1,34 @@
-let square = document.getElementById('div1')
-let rectangle = document.getElementById('div2')
-let circle = document.getElementById('div3')
-let current = document.getElementById('input').value
+const select = document.querySelector('#select')
+let current = document.querySelector('#input')
+const element = document.querySelector('div')
+const btn = document.querySelector('#btn')
 
-document.getElementById('select').addEventListener('change', function () {
+select.addEventListener('change', function () {
+    element.style.backgroundColor = '#ffffff'
+       current.value = '#000000'
 
-    let style = this.value === "square" ? 'block' : 'none';
-    square.style.display = style;
-    square.style.backgroundColor = '#ffffff'
-    document.getElementById('input').value = '#000000'
+    if (this.value === 'square'){
+        element.className = 'div1'
 
-     style = this.value === "rectangle" ? 'block' : 'none';
-    rectangle.style.display = style;
-    rectangle.style.backgroundColor = '#ffffff'
+    } else if (this.value === 'rectangle'){
+        element.className = 'div2'
 
-
-     style = this.value === "circle" ? 'block' : 'none';
-    circle.style.backgroundColor = '#ffffff'
-    circle.style.display = style;
-
+    } else if (this.value === 'circle') {
+       element.className = 'div3'
+    }
 });
 
 function changeColor() {
 
-    let current = document.getElementById('input').value
+    if (current.value !== '#000000') {
 
-       if (current !== '#000000') {
+    element.style.backgroundColor = current.value
 
-        square.style.backgroundColor = current
-        rectangle.style.backgroundColor = current
-        circle.style.backgroundColor = current
-
-    } else {
-           square.style.backgroundColor = '#000000'
-           rectangle.style.backgroundColor = '#000000'
-           circle.style.backgroundColor = '#000000'
-       }
-
-
-}
-
-document.addEventListener("click",function(e){
-    if(e.target.id === 'btn'){
-        changeColor()
+} else {
+        element.style.backgroundColor = '#000000'
     }
-});
-
-
+}
+btn.addEventListener('click', changeColor)
 
 
 
